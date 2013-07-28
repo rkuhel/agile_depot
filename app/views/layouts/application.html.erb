@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
+<div id="banner">
+	<%= image_tag("http://www.fastcodesign.com/multisite_files/codesign/imagecache/960/article_feature/1280-beer-infographic_0.jpg")%>
+	<%= @page_title || "Lost Tribes"%>
+</div>
+<div id="columns">
+	<div id="side">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Questions</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</div>
+<div id="main">
+		<%= yield %>
+		</div>
+	</div>
 </body>
 </html>
